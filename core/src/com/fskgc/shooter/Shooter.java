@@ -17,7 +17,7 @@ public class Shooter extends ApplicationAdapter {
         gameCamera = new Camera2D(16);
         Blocks.defineBlock(new Block(1, "blocks/grass.png"));
         Blocks.defineBlock(new Block(2, "blocks/wood.png"));
-        map = MapLoader.load("assets/map/first.map");
+        map = MapLoader.load("map/first.map");
         MapRenderer.setMap(map);
     }
 

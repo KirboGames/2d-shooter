@@ -13,7 +13,7 @@ public class Resource {
     public static Texture getTexture(String path) {
         Texture texture = textures.get(path);
         if (texture == null) {
-            texture = new Texture(Gdx.files.internal("assets/" + path));
+            texture = new Texture(Gdx.files.internal(path));
             textures.put(path, texture);
             Gdx.app.log("Resource loader", "texture \"" + path + "\" loaded");
         }
