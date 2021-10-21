@@ -47,7 +47,7 @@ public class MapLoader {
         for (int y = 0; y < h; y++) {
             String[] ids = world.get(y).split(" ");
             for (int x = 0; x < w; x++) {
-                map.setBlock(x, y, Integer.parseInt(ids[x]));
+                map.setBlock(x, h - y - 1, Integer.parseInt(ids[x]));
             }
         }
     }
