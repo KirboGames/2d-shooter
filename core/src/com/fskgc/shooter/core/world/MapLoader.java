@@ -15,7 +15,7 @@ public class MapLoader {
     }
 
     private static void parse(Map map, String mapString) {
-        String[] lines = mapString.split("\n");
+        String[] lines = mapString.split("\\r?\\n");
         ArrayList<String> paramLines = new ArrayList<>();
         ArrayList<String> world = new ArrayList<>();
         int i = 0;
