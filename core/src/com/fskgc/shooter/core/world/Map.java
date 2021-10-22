@@ -1,6 +1,8 @@
 package com.fskgc.shooter.core.world;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.fskgc.shooter.core.physic.Physic;
 
 public class Map {
     private int[][] map;
@@ -12,6 +14,9 @@ public class Map {
 
     public void setBlock(int x, int y, int id) {
         map[x][y] = id;
+        if (id != 0) {
+            Physic.createRectangleBody(x, y, 1, 1, BodyDef.BodyType.StaticBody, false);
+        }
         Gdx.app.log("Map", "setblock x: " + x + ", y: " + y + ", id: " + id);
     }
 
